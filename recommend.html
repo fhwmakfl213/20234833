@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식파트너 - 추천 메뉴</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: #811717;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            overflow: hidden;
+        }
+        .logo {
+            float: left;
+            margin-right: 15px;
+        }
+        .logo_img {
+            height: 90px;
+        }
+        .title {
+            float: left;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        header a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .banner {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .banner h2 {
+            z-index: 1;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            transform: translate(-50%, -50%);
+        }
+        .banner img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .post {
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: none; /* 초기에는 모든 포스트 숨김 */
+        }
+        .post.active {
+            display: block; /* 선택된 포스트만 보이도록 */
+        }
+        .post h3 {
+            margin-top: 0;
+        }
+        .post p {
+            margin-bottom: 15px;
+        }
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .post a {
+            color: #811717;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .post a:hover {
+            text-decoration: underline;
+        }
+        .keywords {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .keywords span {
+            cursor: pointer;
+            margin: 0 10px;
+            color: #811717;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        footer {
+            width: 100%;
+            border-top: 1px #811717 solid;
+            border-bottom: 1px #811717 solid;
+            background-color: #811717;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        footer span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="음식파트너 로고.png" class="logo_img" alt="음식파트너">
+        </div>
+        <h1 class="title"><a href="index.html">Food Partner</a></h1>
+    </header>
+    <div class="banner">
+        <img src="food.jpg" alt="Recommendation Banner">
+        <h2>오늘의 추천 메뉴</h2>
+    </div>
+    <div class="keywords">
+        <span onclick="showPost('korean')">한식</span>
+        <span onclick="showPost('japanese')">일식</span>
+        <span onclick="showPost('chinese')">중식</span>
+    </div>
+    <div class="content">
+        <!-- 첫 번째 추천 항목: 한식 -->
+        <div class="post" id="korean">
+            <h3>한식: 고기 불고기</h3>
+            <img src="korean_food.jpg" alt="고기 불고기">
+            <p>한식을 대표하는 고기 불고기는 우리의 대표적인 음식 중 하나입니다. 부드럽고 짭조름한 맛이 일품이죠. 가격 대비 양이 풍성하고, 매장 분위기도 좋습니다.</p>
+            <p><strong>매장:</strong> 하남돼지집</p>
+            <p><strong>메뉴:</strong> 고기 불고기 세트 (최고급 하남돼지, 구워드려요)</p>
+            <p><strong>리뷰:</strong> "맛있는 소고기와 함께하는 한국 전통의 맛."</p>
+            <p><strong>가격:</strong> 대략 1인분 기준 15,000원</p>
+        </div>
+        <!-- 두 번째 추천 항목: 일식 -->
+        <div class="post" id="japanese">
+            <h3>일식: 초밥</h3>
+            <img src="japanese_food.jpg" alt="초밥">
+            <p>신선한 재료와 정교한 기술로 만들어진 일본식 초밥은 간편하면서도 고급스러운 느낌을 주는 음식입니다. 다양한 종류와 맛을 즐길 수 있습니다.</p>
+            <p><strong>매장:</strong> 갠지스</p>
+            <p><strong>메뉴:</strong> 신선한 초밥 조합 (생선의 신선함과 밥의 식감이 좋음)</p>
+            <p><strong>리뷰:</strong> "생선이 신선하고 밥의 식감이 좋아서 자주 방문합니다."</p>
+            <p><strong>가격:</strong> 대략 10조각 기준 25,000원</p>
+        </div>
+        <!-- 세 번째 추천 항목: 중식 -->
+        <div class="post" id="chinese">
+            <h3>중식: 짜장면</h3>
+            <img src="chinese_food.jpeg" alt="짜장면">
+            <p>고소하고 짭조름한 중식의 대표적인 요리, 짜장면은 특유의 굵은면과 짜장소스의 조화가 일품입니다. 빠른 점심 시간에 인기가 많습니다.</p>
+            <p><strong>매장:</strong> 중화요리 전문점</p>
+            <p><strong>메뉴:</strong> 짜장면 (고소하고 짭조름한 맛이 일품)</p>
+            <p><strong>리뷰:</strong> "매장 분위기가 좋고, 양도 푸짐해서 가성비 좋은 짜장면."</p>
+            <p><strong>가격:</strong> 대략 1인분 기준 8,000원</p>
+        </div>
+    </div>
+    <footer>
+        <span>회사소개</span>
+        <span>고객센터</span>
+        <span>공지사항</span>
+    </footer>
+    <script>
+        function showPost(category) {
+            // 모든 포스트 숨기기
+            var posts = document.querySelectorAll('.post');
+            posts.forEach(function(post) {
+                post.classList.remove('active');
+            });
+            
+            // 선택된 카테고리의 포스트 보이기
+            var selectedPost = document.getElementById(category);
+            selectedPost.classList.add('active');
+        }
+    </script>
+</body>
+</html>

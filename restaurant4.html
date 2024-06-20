@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라연</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: #811717;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            overflow: hidden;
+        }
+        .login {
+            border: 1px white solid;
+            color: white;
+            padding: 0px 20px 5px 20px;
+            margin-left: auto;
+            margin-right: 30px;
+        }
+        .logo {
+            float: left;
+            margin-right: 15px;
+        }
+        .logo_img {
+            height: 90px;
+        }
+        .title {
+            float: left;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        header a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .restaurant-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .info-section {
+            margin-top: 20px;
+        }
+        .info-section h2 {
+            color: #811717;
+        }
+        .info-section p {
+            line-height: 1.6;
+        }
+        .menu {
+            margin-top: 20px;
+        }
+        .menu table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .menu th, .menu td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .menu th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="음식파트너 로고.png" class="logo_img" alt="음식파트너">
+        </div>
+        <h1 class="title"><a href="index.html">Food Partner</a></h1>
+        <h3 class="login"><a href="login.html">Login</a></h3>
+    </header>
+    <div class="container">
+        <img src="restaurant4.jpg" alt="라연" class="restaurant-img">
+        <div class="info-section">
+            <h2>라연</h2>
+            <p><strong>소개:</strong> 라연은 미슐랭 3스타를 받은 전통 한국 요리를 우아하게 즐길 수 있는 고급 레스토랑입니다.</p>
+        </div>
+        <div class="info">
+            <h2>가는 길</h2>
+            <p>서울특별시 종로구 삼청로 123</p>
+            <p>지하철 3호선 안국역 2번 출구에서 도보 7분</p>
+        </div>
+        <div class="info">
+            <h2>영업시간</h2>
+            <p>매일 12:00 - 21:00</p>
+        </div>
+        <div class="info">
+            <h2>평가</h2>
+            <p>4.8/5.0 (300개의 리뷰)</p>
+        </div>
+        <div class="menu">
+            <h2>메뉴</h2>
+            <table>
+                <tr>
+                    <th>메뉴</th>
+                    <th>가격</th>
+                </tr>
+                <tr>
+                    <td>한정식</td>
+                    <td>70,000원</td>
+                </tr>
+                <tr>
+                    <td>육회비빔밥</td>
+                    <td>40,000원</td>
+                </tr>
+                <tr>
+                    <td>삼계탕</td>
+                    <td>50,000원</td>
+                </tr>
+                <tr>
+                    <td>해물탕</td>
+                    <td>60,000원</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

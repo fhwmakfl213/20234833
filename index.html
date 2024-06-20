@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식파트너</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: #811717;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            overflow: hidden;
+        }
+        .login {
+            border: 1px white solid;
+            color: white;
+            padding: 5px 20px 5px 20px;
+            margin-left: auto;
+            margin-right: 40px;
+        }
+        .logo {
+            float: left;
+            margin-right: 15px;
+        }
+        .logo_img {
+            height: 90px;
+        }
+        .title {
+            float: left;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        header a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .benner {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .benner h2 {
+            z-index: 1;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: white;
+            transform: translate(-50%, -50%);
+        }
+        .Rec {
+            border: 1px white solid;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            font-size: medium;
+            padding: 5px 10px;
+            line-height: 3.5;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .Rec a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .benner img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .content {
+            display: flex;
+            flex: 1;
+        }
+        nav {
+            width: 25%;
+            text-align: center;
+            box-sizing: border-box;
+            margin-left: 40px;
+        }
+        .Type {
+            padding: 10px;
+            height: 100%;
+            background-color: white;
+            overflow-wrap: break-word;
+            white-space: nowrap;
+            word-break: break-all;
+            border: 1px gray solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .Type table {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+        .Type td {
+            padding-bottom: 10px;
+        }
+        #search {
+            margin-bottom: 10px;
+            padding: 10px;
+            margin-top: 10px;
+            width: calc(100% - 40px); /* Adjusting width to account for padding */
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+        .restaurant img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .restaurant {
+            border: 1px gray solid;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+            text-align: center;
+            padding: 10px;
+        }
+        footer {
+            width: 100%;
+            border-top: 1px #811717 solid;
+            border-bottom: 1px #811717 solid;
+            background-color: #811717;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        footer span {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .restaurant {
+                width: calc(50% - 10px); /* Two restaurants per row */
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+            nav {
+                width: 100%;
+                margin-left: 0;
+            }
+            main {
+                width: 100%;
+            }
+            .restaurant {
+                width: 100%; /* One restaurant per row */
+                margin-bottom: 10px; /* Space between each restaurant */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="음식파트너 로고.png" class="logo_img" alt="음식파트너">
+        </div>
+        <h1 class="title"><a href="index.html">Food Partner</a></h1>
+        <h3 class="login"><a href="login.html">Login</a></h3>
+    </header>
+    <div class="benner">
+        <h2>맛있는 음식을 드시고 싶으신가요?<br><span class="Rec"><a href="recommend.html">추천메뉴 바로가기</a></span></h2>
+        <img src="food.jpg" alt="food">
+    </div>
+    <div class="content">
+        <nav>
+            <div class="Type">
+                <input type="text" id="search" placeholder="원하시는 음식을 검색하세요!"><br>
+                <table>
+                    <tbody>
+                        <form>
+                            <tr>
+                                <td><input type="checkbox" name="foodType" value="korean" checked>한식</td>
+                                <td><input type="checkbox" name="foodType" value="japanese">일식</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="foodType" value="chinese">중식</td>
+                                <td><input type="checkbox" name="foodType" value="dessert">디저트</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="foodType" value="pizza">피자</td>
+                                <td><input type="checkbox" name="foodType" value="hamburger">햄버거</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="foodType" value="noodles">짜장면</td>
+                                <td><input type="checkbox" name="foodType" value="coldNoodles">냉면</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="foodType" value="snacks">분식</td>
+                                <td><input type="checkbox" name="foodType" value="lateNight">야식</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="foodType" value="sushi">초밥</td>
+                                <td><input type="checkbox" name="foodType" value="bbq">바베큐</td>
+                            </tr>
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+        </nav>
+        <main>
+            <div class="restaurant">
+                <a href="restaurant1.html">
+                    <img src="restaurant1.jpg" alt="Restaurant 1">
+                </a>
+                <h3>하남돼지집</h3>
+                <p>삼겹살 체인점, 최고급 하남돼지, 구워드려요</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant2.html">
+                    <img src="restaurant2.jpg" alt="Restaurant 2">
+                </a>
+                <h3>롤링파스타</h3>
+                <p>이탈리안 파스타의 합리적인 가격, 좋은 식재료</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant3.html">
+                    <img src="restaurant3.jpg" alt="Restaurant 3">
+                </a>
+                <h3>구르카</h3>
+                <p>명동에 위치한 이 레스토랑은 맛있는 인도, 중국 및 네팔 요리를 제공합니다.</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant4.html">
+                    <img src="restaurant4.jpg" alt="Restaurant 4">
+                </a>
+                <h3>라연</h3>
+                <p>미슐랭 3스타를 받은 전통 한국 요리를 우아하게 맛볼 수 있는 고급 레스토랑입니다.</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant5.html">
+                    <img src="restaurant5.jpg" alt="Restaurant 5">
+                </a>
+                <h3>Cook & Book</h3>
+                <p>귀여운 인테리어와 친절한 직원들이 있는 비건 음식점입니다.</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant6.html">
+                    <img src="restaurant6.jpg" alt="Restaurant 6">
+                </a>
+                <h3>한국의 집</h3>
+                <p>맛있는 음식뿐만 아니라 멋진 문화 공연도 즐길 수 있는 곳입니다.</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant7.html">
+                    <img src="restaurant7.jpg" alt="Restaurant 7">
+                </a>
+                <h3>갠지스</h3>
+                <p>멋진 분위기에서 맛있는 인도 요리를 즐길 수 있는 레스토랑입니다.</p>
+            </div>
+            <div class="restaurant">
+                <a href="restaurant8.html">
+                    <img src="restaurant8.jpg" alt="Restaurant 8">
+                </a>
+                <h3>단풍나무집</h3>
+                <p>2005년부터 운영 중인 프리미엄 바베큐 레스토랑입니다.</p>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <span>회사소개</span>
+        <span>고객센터</span>
+        <span>공지사항</span>
+    </footer>
+</body>
+</html>

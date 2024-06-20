@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하남돼지집</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            clear: both;
+            width: 100%;
+            height: 100px;
+            background-color: #811717;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            overflow: hidden;
+        }
+        .login {
+            border: 1px white solid;
+            color: white;
+            padding: 0px 20px 5px 20px;
+            margin-left: auto;
+            margin-right: 30px;
+        }
+        .logo {
+            float: left;
+            margin-right: 15px;
+        }
+        .logo_img {
+            height: 90px;
+        }
+        .title {
+            float: left;
+            color: rgb(255, 255, 255);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+        header a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .restaurant-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .info-section {
+            margin-top: 20px;
+        }
+        .info-section h2 {
+            color: #811717;
+        }
+        .info-section p {
+            line-height: 1.6;
+        }
+        .menu {
+            margin-top: 20px;
+        }
+        .menu table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .menu th, .menu td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .menu th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="음식파트너 로고.png" class="logo_img" alt="음식파트너">
+        </div>
+        <h1 class="title"><a href="index.html">Food Partner</a></h1>
+        <h3 class="login"><a href="login.html">Login</a></h3>
+    </header>
+    <div class="container">
+        <img src="restaurant1.jpg" alt="하남돼지집" class="restaurant-img">
+        <div class="info-section">
+            <h2>하남돼지집</h2>
+            <p><strong>소개:</strong> 하남돼지집은 최고급 삼겹살을 제공하는 체인점으로, 고기를 구워드리는 서비스를 제공합니다. 신선한 재료와 정성스러운 서비스로 유명합니다.</p>
+        </div>
+        <div class="info">
+            <h2>가는 길</h2>
+            <p>서울특별시 강남구 테헤란로 123</p>
+            <p>지하철 2호선 삼성역 5번 출구에서 도보 5분</p>
+        </div>
+        <div class="info">
+            <h2>영업시간</h2>
+            <p>매일 11:00 - 22:00</p>
+        </div>
+        <div class="info">
+            <h2>평가</h2>
+            <p>4.5/5.0 (200개의 리뷰)</p>
+        </div>
+        <div class="menu">
+            <h2>메뉴</h2>
+            <table>
+                <tr>
+                    <th>메뉴</th>
+                    <th>가격</th>
+                </tr>
+                <tr>
+                    <td>삼겹살</td>
+                    <td>15,000원</td>
+                </tr>
+                <tr>
+                    <td>목살</td>
+                    <td>14,000원</td>
+                </tr>
+                <tr>
+                    <td>갈비살</td>
+                    <td>18,000원</td>
+                </tr>
+                <tr>
+                    <td>된장찌개</td>
+                    <td>6,000원</td>
+                </tr>
+                <tr>
+                    <td>냉면</td>
+                    <td>7,000원</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
